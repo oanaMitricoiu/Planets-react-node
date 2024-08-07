@@ -6,7 +6,7 @@ const launchesSchema = new mongoose.Schema({
         required: true,
     },
     launchDate: {
-        type: Number,
+        type: Date,
         required: true,
     },
     mission: {
@@ -30,9 +30,9 @@ const launchesSchema = new mongoose.Schema({
         required: true,
         default: true,
     },
-    customer: {
+    customers: {
         type: [String],
     },
 });
 
-mondule.exports = mongoose.model("Launch", launchesSchema);
+module.exports = mongoose.model("Launch", launchesSchema);
