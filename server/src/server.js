@@ -1,7 +1,11 @@
 const http = require("http");
 require("dotenv").config();
+const helmet = require("helmet");
 
 const app = require("./app");
+
+app.use(helmet());
+
 const { mongoConnect } = require("./services/mongo");
 
 const { loadPlanetsData } = require("./models/planets.model");
